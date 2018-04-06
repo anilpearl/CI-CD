@@ -13,22 +13,22 @@
 	
 
 
-Development Setup:
+# Development Setup:
 
-* run "sudo .prepare-dev.sh" bash script to prepare the environment for node.js development
+   * run "sudo .prepare-dev.sh" bash script to prepare the environment for node.js development
 
 
-Jenkins Setup:
+# Jenkins Setup:
 
-* under setup directory, add your own public key"use ssh-keygen" to "pre.sh" and run it  
+  * under setup directory, add your own public key"use ssh-keygen" to "pre.sh" and run it  
 
-* run ansible-playbook prepare-env.yml to install java and Jenkins
+  * run ansible-playbook prepare-env.yml to install java and Jenkins
 
-* under CI-CD directory,
+  * under CI-CD directory,
 
-  on your server add jenkins user to docker group
+    on your server add jenkins user to docker group
 
-    # usermod -aG docker jenkins
+     usermod -aG docker jenkins
 
 navigate http://your-ip:8080/pluginManager/available
 
@@ -38,56 +38,56 @@ click Download Now and check the box to restart
 
 * get the latest version of the source code, to build docker image, to upload docker image to hub.docker.com
 
-how create a pipeline?
+# How create a pipeline?
 
-1- select New Item from left side
+   1- select New Item from left side
 
-2- enter the name and select the pipelin type
+   2- enter the name and select the pipelin type
 
-3- copy the content of Jenkinsfile to the pipeline
-
-
-how to use pipeline syntax?
-
-Navugate http://your-ip:8080/job/job-name/pipeline-syntax/
-
--> select git and prvoide the repo url and username/password"if it is a private", it will generate the syntax for you
-
--> select the withdocker-registry which installed before and provide it with credtanials
-
-* run following script to install and configure Jenkins
-
-* Document steps to setup Jenkins job to get the latest version of the source code, to build docker image, to upload docker image to hub.docker.com
+   3- copy the content of Jenkinsfile to the pipeline
 
 
-How to run container:
+# How to use pipeline syntax?
 
-* install Docker
+   Navugate http://your-ip:8080/job/job-name/pipeline-syntax/
 
-  curl -fsSL get.docker.com -o get-docker.sh
+   -> select git and prvoide the repo url and username/password"if it is a private", it will generate the syntax for you
 
-  sh get-docker.sh
+   -> select the withdocker-registry which installed before and provide it with credtanials
 
-* Build the image
+   * run following script to install and configure Jenkins
 
-    docker build -t docker-demo:1 .
-
-* Run a Container
-
-    docker run -d -p 80:3000 docker-demo:1
+   * Document steps to setup Jenkins job to get the latest version of the source code, to build docker image, to upload docker image to hub.docker.com
 
 
+# How to run container:
 
-Testing:
+   * install Docker
 
- cd nodejs-endpoint-container
+      curl -fsSL get.docker.com -o get-docker.sh
 
- npm install
+      sh get-docker.sh
 
- npm test
+   * Build the image
+
+      docker build -t docker-demo:1 .
+
+   * Run a Container
+
+      docker run -d -p 80:3000 docker-demo:1
+
+
+
+# Testing:
+
+   cd nodejs-endpoint-container
+
+   npm install
+
+   npm test
  
 
-* results:
+# Results:
 
 Root Directory Test
 
