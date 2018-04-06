@@ -1,3 +1,18 @@
+#  CI/CD for simple NodeJs APP with unit tests 
+
+# Technology
+
+   * NodeJS with restify framework
+   
+   * Docker
+   
+   * Ansible
+
+   * Jenkins
+   
+	
+
+
 Development Setup:
 
 * run "sudo .prepare-dev.sh" bash script to prepare the environment for node.js development
