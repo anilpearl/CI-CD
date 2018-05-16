@@ -1,2 +1,4 @@
 #!/bin/bash
-node app/server.js
+npm install --production
+npm install pm2 -g 
+pm2 start app/server.js
