@@ -1,5 +1,5 @@
 {
-  "name": "your-app-name",
+  "name": "jenkins CI-CD",
   "script": "app/server.js",
   "instances": "2",
   "env": {
